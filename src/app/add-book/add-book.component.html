@@ -1,0 +1,11 @@
+<div class="col-md-4 offset-md-4 shadow-lg p-5">
+    <form [formGroup]='bookAddForm' (ngSubmit)="createNewBook()">
+        <div class="row g-5">
+            <h2>Add Book</h2>
+            <input type="text" formControlName='id' class="form-control">
+            <input type="text" formControlName='name' class="form-control">
+            <input type="text" formControlName='price' class="form-control">
+            <input type="submit" value="Add Book" class="btn btn-secondary" [disabled]='!bookAddForm.valid'>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,10 @@
+<div class="col-md-4 offset-md-4 shadow-lg p-5">
+    <form [formGroup] = 'bookEditForm' (ngSubmit) = 'EditBook()'>
+        <div class="row g-3">
+            Enter Id: <input type="text" class="form-control" formControlName = 'id' readonly>
+            Enter Name: <input type="text" class="form-control" formControlName = 'name'>
+            Enter Price: <input type="text" class="form-control" formControlName = 'price'>
+            <input type="submit" value="Edit Book" class = 'btn btn-success' [disabled] = '!bookEditForm.valid'>
+        </div>
+    </form>
+</div>

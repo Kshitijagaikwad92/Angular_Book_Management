@@ -1,0 +1,26 @@
+<div class="container">
+    <p>
+        <button class="btn btn-success" routerLink='/AddBook'>Add Book</button>
+    </p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Name</th>
+                <th>Book Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let b of books'>
+                <td>{{b.id}}</td>
+                <td>{{b.name}}</td>
+                <td>{{b.price}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteBook(b.id)">Delete</button>
+                    <button class="btn btn-info" [routerLink] ="['/Editbook/', b.id]">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
